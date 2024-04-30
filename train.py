@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-# TODO : Gerer les réseaux en fonction de la taille de l'image et des channels
-# TODO : Gérer la seed
-# TODO :
 
 # Standard library imports
 import os

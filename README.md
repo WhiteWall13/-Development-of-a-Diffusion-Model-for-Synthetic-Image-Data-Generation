@@ -1,4 +1,7 @@
 # Development of a Diffusion Model for Synthetic Image Data Generation
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
 
 This project aims to develop a diffusion model capable of generating synthetic images for various applications. The project architecture is designed to be simple yet effective, allowing for easy customization and experimentation through a detailed configuration file.
 

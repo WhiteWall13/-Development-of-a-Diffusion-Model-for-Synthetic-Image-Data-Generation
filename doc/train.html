@@ -1,0 +1,1345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>train API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>train</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+# Import of libraries
+import random
+import imageio
+import numpy as np
+from tqdm.auto import tqdm
+import matplotlib.pyplot as plt
+
+import einops
+import torch
+import torch.nn as nn
+from torch.optim import Adam
+from torch.utils.data import DataLoader, Subset
+
+from torchvision.transforms import Compose, ToTensor, Lambda, Grayscale, Resize
+import torchvision.transforms.functional as F
+from torchvision.datasets import ImageFolder
+
+from PIL import Image
+
+import os
+
+from unet import MyUNet
+
+
+import configparser
+
+def get_config():
+    &#34;&#34;&#34;
+    Reads the configuration from &#39;config.ini&#39; and returns it as a dictionary.
+    
+    :return: A dictionary containing the configurations.
+    :rtype: dict
+    &#34;&#34;&#34;
+    # Create a ConfigParser object
+    config = configparser.ConfigParser()
+
+    # Read the config.ini file
+    config.read(&#39;config.ini&#39;)
+
+    # Access the DEFAULT section and return it as a dictionary
+    config_dict = {key: eval(value) if value in [&#39;True&#39;, &#39;False&#39;, &#39;None&#39;] else value for key, value in config[&#39;DEFAULT&#39;].items()}
+    
+    # Convert numeric values from strings to appropriate types
+    config_dict[&#39;img_size&#39;] = int(config_dict[&#39;img_size&#39;])
+    config_dict[&#39;channel&#39;] = int(config_dict[&#39;channel&#39;])
+    config_dict[&#39;batch_size&#39;] = int(config_dict[&#39;batch_size&#39;])
+    config_dict[&#39;n_epochs&#39;] = int(config_dict[&#39;n_epochs&#39;])
+    config_dict[&#39;n_steps&#39;] = int(config_dict[&#39;n_steps&#39;])
+    config_dict[&#39;lr&#39;] = float(config_dict[&#39;lr&#39;])
+    config_dict[&#39;min_beta&#39;] = float(config_dict[&#39;min_beta&#39;])
+    config_dict[&#39;max_beta&#39;] = float(config_dict[&#39;max_beta&#39;])
+    config_dict[&#39;debug&#39;] = bool(config_dict[&#39;debug&#39;])
+    config_dict[&#39;n_images&#39;] = int(config_dict[&#39;n_images&#39;])
+    
+
+    return config_dict
+
+# Getting configuration
+config = get_config()
+
+# Destructuring the dictionary into variables
+dataset_path = config[&#39;dataset&#39;]
+class_name = config[&#39;class&#39;]
+model_path = config[&#39;model&#39;]
+img_size = config[&#39;img_size&#39;]
+channel = config[&#39;channel&#39;]
+batch_size = config[&#39;batch_size&#39;]
+n_epochs = config[&#39;n_epochs&#39;]
+lr = config[&#39;lr&#39;]
+n_steps = config[&#39;n_steps&#39;]
+min_beta = config[&#39;min_beta&#39;]
+max_beta = config[&#39;max_beta&#39;]
+debug = config[&#39;debug&#39;]
+
+# Checking if the arguments are valid
+valid_img_sizes = {64, 128, 256, 512}
+valid_channels = {1, 3}
+
+if img_size not in valid_img_sizes:
+    raise ValueError(f&#34;Invalid img_size: {img_size}. Must be one of {valid_img_sizes}.&#34;)
+
+if channel not in valid_channels:
+    raise ValueError(f&#34;Invalid number of channel: {channel}. Must be one of {valid_channels}.&#34;)
+
+# Setting reproducibility
+SEED = 0
+random.seed(SEED)
+np.random.seed(SEED)
+torch.manual_seed(SEED)
+
+# Definitions
+img_path = &#34;debug_img&#34;
+
+# Getting device
+device = torch.device(&#34;cuda&#34; if torch.cuda.is_available() else (&#34;cpu&#34;))
+print(f&#34;Using device: {device} \t&#34; + (f&#34;{torch.cuda.get_device_name(0)}&#34; if torch.cuda.is_available() else &#34;CPU&#34;))
+
+
+def make_path(path):
+    &#34;&#34;&#34;
+    A function that creates a directory at the specified path if it does not already exist.
+    
+    Args:
+    - path (str): The path where the directory will be created.
+    
+    Returns:
+    - None
+    &#34;&#34;&#34;
+    if not os.path.exists(path):
+        os.makedirs(path)
+        
+
+def show_images(images, title, path=img_path):
+    &#34;&#34;&#34;
+    Show images in a grid layout with a given title and save the resulting figure as a PNG file.
+
+    Parameters:
+    - images (torch.Tensor or numpy.ndarray): The images to be displayed. If a torch.Tensor is provided, it will be converted to a numpy array.
+    - title (str): The title of the figure.
+    - path (str, optional): The path to save the figure. Defaults to img_path.
+
+    Returns:
+    None
+    &#34;&#34;&#34;
+    # Create path if it does not exist
+    make_path(path)
+
+    # Converting images to CPU numpy arrays
+    if type(images) is torch.Tensor:
+        images = images.detach().cpu().numpy()
+
+    # Defining number of rows and columns
+    fig = plt.figure(figsize=(8, 8))
+    rows = int(len(images) ** (1 / 2))
+    cols = round(len(images) / rows)
+
+    # Populating figure with sub-plots
+    idx = 0
+    for r in range(rows):
+        for c in range(cols):
+            fig.add_subplot(rows, cols, idx + 1)
+
+            if idx &lt; len(images):
+                plt.imshow(images[idx][0], cmap=&#34;gray&#34;)
+                idx += 1
+    fig.suptitle(title, fontsize=30)
+    
+    # Save the figure
+    plt.savefig(f&#39;{path}/{title}.png&#39;)
+    print(f&#34;Saved at {path}/{title}.png&#34;)
+    plt.close()
+    
+
+def save_images(images, path=&#34;output&#34;, prefix=&#34;output&#34;, n_images=1):
+    &#34;&#34;&#34;
+    Saves a specified number of images to a given path with a specified prefix.
+
+    Parameters:
+        images (torch.Tensor): The tensor containing the images to be saved.
+        path (str, optional): The path to save the images. Defaults to &#34;output&#34;.
+        prefix (str, optional): The prefix to be added to the saved image filenames. Defaults to &#34;output&#34;.
+        n_images (int, optional): The number of images to be saved. Defaults to 1.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    # Create path if it does not exist
+    make_path(path)
+    
+    # Get the number of images to save
+    n_images = n_images if n_images is not None else images.size(0)
+    
+    # Save the images
+    for i in range(min(n_images, images.size(0))):
+        img = images[i].cpu().squeeze()  # De-tensorize
+        img = (img - img.min()) / (img.max() - img.min()) * 255  # Normalization
+        img = img.byte()  # Convert to uint8
+        img_pil = Image.fromarray(img.numpy(), mode=&#34;L&#34;)  # Convert to image PIL
+        img_pil.save(os.path.join(path, f&#34;{prefix}_{i+1}.jpg&#34;))
+        print(f&#34;Image {i+1} saved at {path}&#34;)
+    
+
+def show_first_batch(loader):
+    &#34;&#34;&#34;
+    Shows the first batch of images.
+
+    Parameters:
+    - loader: The data loader containing the batches of images.
+
+    Returns:
+    None
+    &#34;&#34;&#34;
+    make_path(f&#34;{img_path}/original&#34;)
+    for batch in loader:
+        show_images(batch[0], &#34;original/img_first_batch&#34;)
+        break
+
+class SquarePad:
+    def __call__(self, image):
+        &#34;&#34;&#34;
+        A function that pads the input image to make it square by adding padding to the left, right, top, and bottom.
+        
+        Args:
+        - image: The input image to be padded.
+        
+        Returns:
+        - Tensor: The padded image.
+        &#34;&#34;&#34;
+        max_wh = max(image.size)
+        p_left, p_top = [(max_wh - s) // 2 for s in image.size]
+        p_right, p_bottom = [max_wh - (s+pad) for s, pad in zip(image.size, [p_left, p_top])]
+        padding = (p_left, p_top, p_right, p_bottom)
+        return F.pad(image, padding, 0, &#39;constant&#39;)
+
+# DDPM class
+class MyDDPM(nn.Module):
+    def __init__(self, network, n_steps=n_steps, min_beta=min_beta, max_beta=max_beta, device=None, image_chw=(channel, img_size, img_size)):
+        &#34;&#34;&#34;
+        Initializes a new instance of the MyDDPM class.
+
+        Args:
+            network (torch.nn.Module): The neural network model used for denoising.
+            n_steps (int, optional): The number of steps in the beta schedule. Defaults to n_steps.
+            min_beta (float, optional): The minimum value of the beta schedule. Defaults to min_beta.
+            max_beta (float, optional): The maximum value of the beta schedule. Defaults to max_beta.
+            device (str, optional): The device to run the computations on. Defaults to None.
+            image_chw (tuple, optional): The shape of the input images. Defaults to (channel, img_size, img_size).
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        super(MyDDPM, self).__init__()
+        self.n_steps = n_steps
+        self.device = device
+        self.image_chw = image_chw
+        self.network = network.to(device)
+        self.betas = torch.linspace(min_beta, max_beta, n_steps).to(device)
+        self.alphas = 1 - self.betas
+        self.alpha_bars = torch.tensor([torch.prod(self.alphas[:i + 1]) for i in range(len(self.alphas))]).to(device)
+
+    def forward(self, x0, t, eta=None):
+        &#34;&#34;&#34;
+        Applies the forward pass of the DDPM model to generate noisy images.
+
+        Args:
+            x0 (torch.Tensor): The input image tensor of shape (n, c, h, w).
+            t (int): The time step of the DDPM model.
+            eta (torch.Tensor, optional): The noise tensor of shape (n, c, h, w). If not provided, a random noise tensor is generated.
+
+        Returns:
+            torch.Tensor: The noisy image tensor of shape (n, c, h, w).
+        &#34;&#34;&#34;
+        n, c, h, w = x0.shape
+        a_bar = self.alpha_bars[t]
+
+        if eta is None:
+            eta = torch.randn(n, c, h, w).to(self.device)
+
+        noisy = a_bar.sqrt().reshape(n, 1, 1, 1) * x0 + (1 - a_bar).sqrt().reshape(n, 1, 1, 1) * eta
+        return noisy
+
+    def backward(self, x, t):
+        &#34;&#34;&#34;
+        Run each image through the network for each timestep t in the vector t.
+        The network returns its estimation of the noise that was added.
+
+        Parameters:
+            x (torch.Tensor): The input image tensor of shape (n, c, h, w).
+            t (torch.Tensor): The time step tensor of shape (n,).
+
+        Returns:
+            torch.Tensor: The output tensor of shape (n, c, h, w).
+        &#34;&#34;&#34;
+        return self.network(x, t)
+
+
+def show_forward(ddpm, loader, device):
+    &#34;&#34;&#34;
+    Shows the forward process.
+
+    Parameters:
+        ddpm: The ddpm model.
+        loader: The data loader.
+        device: The device for computation.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    make_path(f&#34;{img_path}/original&#34;)
+    make_path(f&#34;{img_path}/noisy&#34;)
+    for batch in loader:
+        imgs = batch[0]
+        show_images(imgs, &#34;original/Original_images&#34;)
+        for percent in [0, 0.25, 0.5, 0.75, 1]:
+            t_index = int(percent * (ddpm.n_steps - 1))
+            t_values = [t_index for _ in range(imgs.shape[0])]
+            noisy_imgs = ddpm(imgs.to(device), t_values)
+            show_images(noisy_imgs, f&#34;noisy/DDPM_Noisy_images_{int(percent * 100)}%&#34;)
+        break
+
+
+def generate_new_images(ddpm, n_samples=16, device=None, frames_per_gif=100, gif_name=&#34;sampling.gif&#34;, c=channel, h=img_size, w=img_size, gif=True):
+    &#34;&#34;&#34;
+    Generates new images using the given DDPM model.
+
+    Args:
+        ddpm (MyDDPM): The DDPM model.
+        n_samples (int, optional): The number of samples to generate. Defaults to 16.
+        device (str, optional): The device for computation. Defaults to None.
+        frames_per_gif (int, optional): The number of frames per GIF. Defaults to 100.
+        gif_name (str, optional): The name of the GIF file. Defaults to &#34;sampling.gif&#34;.
+        c (int, optional): The number of channels in the images. Defaults to channel.
+        h (int, optional): The height of the images. Defaults to img_size.
+        w (int, optional): The width of the images. Defaults to img_size.
+        gif (bool, optional): Whether to generate a GIF. Defaults to True.
+
+    Returns:
+        torch.Tensor: The generated images.
+
+    Description:
+        This function generates new images using the given DDPM model. It starts by initializing the images with random noise.
+        Then, it iterates over the time steps in reverse order. For each time step, it estimates the noise to be removed and performs
+        partial denoising of the images. If the time step is greater than 0, it adds some more noise to the images.
+        After denoising, it adds frames to the GIF if the gif flag is set to True and the current index is in the frame indices or
+        the time step is 0. The frames are stored in a list. Finally, if the gif flag is set to True, the GIF is stored as a file.&#34;&#34;&#34;
+     
+    # Defining frame indices   
+    frame_idxs = np.linspace(0, ddpm.n_steps, frames_per_gif).astype(np.uint)
+    frames = []
+    
+    with torch.no_grad():
+        # Defining device
+        if device is None:
+            device = ddpm.device
+
+        # Starting from random noise
+        x = torch.randn(n_samples, c, h, w).to(device)
+
+        for idx, t in enumerate(list(range(ddpm.n_steps))[::-1]):
+            # Estimating noise to be removed
+            time_tensor = (torch.ones(n_samples, 1) * t).to(device).long()
+            eta_theta = ddpm.backward(x, time_tensor)
+            
+            # Estimating alpha_t and alpha_t_bar
+            alpha_t = ddpm.alphas[t]
+            alpha_t_bar = ddpm.alpha_bars[t]
+
+            # Partially denoising the image
+            x = (1 / alpha_t.sqrt()) * (x - (1 - alpha_t) / (1 - alpha_t_bar).sqrt() * eta_theta)
+
+            # Adding some noise like in Langevin Dynamics fashion
+            if t &gt; 0:
+                z = torch.randn(n_samples, c, h, w).to(device)
+                beta_t = ddpm.betas[t]
+                sigma_t = beta_t.sqrt()
+                x = x + sigma_t * z
+
+            # Adding frames to the GIF
+            if gif and idx in frame_idxs or t == 0:
+                
+                # Putting digits in range [0, 255]
+                normalized = x.clone()
+                for i in range(len(normalized)):
+                    normalized[i] -= torch.min(normalized[i])
+                    normalized[i] *= 255 / torch.max(normalized[i])
+                normalized = normalized.cpu().numpy().astype(np.uint8)
+
+                # Convert single channel to RGB by stacking
+                if c == 1:
+                    normalized = np.concatenate((normalized,)*3, axis=1)  # Concatenate along the channel axis
+
+                sqrt_n = int(np.sqrt(n_samples))
+                if sqrt_n ** 2 == n_samples:  # Vérifier si n_samples est un carré parfait
+                    frame = einops.rearrange(normalized, &#34;(b1 b2) c h w -&gt; (b1 h) (b2 w) c&#34;, b1=sqrt_n)
+                else:
+                    frame = einops.rearrange(normalized, &#34;b c h w -&gt; (b h) w c&#34;)
+
+                # Rendering frame
+                frames.append(frame)
+
+    # Storing the gif
+    if gif:
+        with imageio.get_writer(gif_name, mode=&#34;I&#34;) as writer:
+            for idx, frame in enumerate(frames):
+                writer.append_data(frame)
+                if idx == len(frames) - 1:
+                    for _ in range(frames_per_gif // 3):
+                        writer.append_data(frames[-1])
+
+    return x
+
+
+def training_loop(ddpm, loader, n_epochs, optim, device=device, debug=debug, store_path=model_path):
+    &#34;&#34;&#34;
+    Trains a DDPM model on a given dataset using the specified optimizer and number of epochs.
+    
+    Args:
+        ddpm (DDPM): The DDPM model to be trained.
+        loader (DataLoader): The data loader containing the training dataset.
+        n_epochs (int): The number of epochs to train the model.
+        optim (Optimizer): The optimizer to use for training.
+        device (str, optional): The device to use for training. Defaults to the global device variable.
+        debug (bool, optional): Whether to enable debug mode. Defaults to the global debug variable.
+        store_path (str, optional): The path to store the trained model. Defaults to the global model_path variable.
+        
+    Returns:
+        None
+        
+    Raises:
+        None
+        
+    Side Effects:
+        - Trains the DDPM model on the specified dataset.
+        - Stores the trained model at the specified store_path if it is the best model encountered so far.
+        - Saves the training loss plot at img_path/plot/plot_loss.png if debug mode is enabled.
+        - Saves the generated images at img_path/gif/sampling.gif and img_path/epoch/{epoch + 1} if debug mode is enabled.
+        - Prints the loss at each epoch and whether the model is the best encountered so far.
+    &#34;&#34;&#34;
+    # Defining loss
+    mse = nn.MSELoss()
+    best_loss = float(&#34;inf&#34;)
+    
+    # Defining steps
+    n_steps = ddpm.n_steps
+
+    # Create debug path if needed
+    if debug:
+        losses = []
+        make_path(f&#34;{img_path}/gif&#34;)
+        make_path(f&#34;{img_path}/epoch&#34;)
+        make_path(f&#34;{img_path}/plot&#34;)
+    
+    # Training
+    for epoch in tqdm(range(n_epochs), desc=f&#34;Training progress&#34;, colour=&#34;#00ff00&#34;):
+        epoch_loss = 0.0
+        for step, batch in enumerate(tqdm(loader, leave=False, desc=f&#34;Epoch {epoch + 1}/{n_epochs}&#34;, colour=&#34;#005500&#34;)):
+            # Loading data
+            x0 = batch[0].to(device)
+            n = len(x0)
+
+            # Picking some noise for each of the images in the batch, a timestep and the respective alpha_bars
+            eta = torch.randn_like(x0).to(device)
+            t = torch.randint(0, n_steps, (n,)).to(device)
+
+            # Computing the noisy image based on x0 and the time-step (forward process)
+            noisy_imgs = ddpm(x0, t, eta)
+
+            # Getting model estimation of noise based on the images and the time-step
+            eta_theta = ddpm.backward(noisy_imgs, t.reshape(n, -1))
+
+            # Optimizing the MSE between the noise plugged and the predicted noise
+            loss = mse(eta_theta, eta)
+            optim.zero_grad()
+            loss.backward()
+            optim.step()
+
+            # Storing loss
+            epoch_loss += loss.item() * len(x0) / len(loader.dataset)
+            
+        # Plot the loss at each epoch
+        if debug:
+            losses.append(epoch_loss)
+            plt.figure(figsize=(10, 5))
+            plt.plot(range(1, epoch + 2), losses, &#39;o-&#39;, label=&#39;Loss per Epoch&#39;)
+            plt.xlabel(&#39;Epoch&#39;)
+            plt.ylabel(&#39;Loss&#39;)
+            plt.title(&#39;Training Loss over Epochs&#39;)
+            plt.legend()
+            plt.grid(True)
+            plt.savefig(f&#34;{img_path}/plot/plot_loss.png&#34;)
+            plt.close()  
+
+            # Save images generated at this epoch
+            show_images(generate_new_images(ddpm, device=device, gif_name=f&#34;{img_path}/gif/sampling.gif&#34;), f&#34;epoch/{epoch + 1}&#34;)
+
+        # Print losss
+        log_string = f&#34;Loss at epoch {epoch + 1}: {epoch_loss:.3f}&#34;
+
+        # Storing the model
+        if best_loss &gt; epoch_loss:
+            best_loss = epoch_loss
+            torch.save(ddpm.state_dict(), store_path)
+            log_string += &#34; --&gt; Best model ever (stored)&#34;
+
+        print(log_string)
+
+# main
+if __name__ == &#34;__main__&#34;:
+    # Loading the data (converting each image into a tensor and normalizing between [-1, 1])
+    load_list = [
+        SquarePad(), # Padding
+        Resize(img_size), # Resize
+        ToTensor(), # To tensor
+        Lambda(lambda x: (x - 0.5) * 2)] # Normalization
+    
+    if channel == 1:
+        load_list.append(Grayscale())
+    
+    transform = Compose(load_list)
+    dataset = ImageFolder(root=dataset_path, transform=transform)
+    
+    # Filtering the dataset if class_name is specified
+    if class_name is not None:
+        class_index = dataset.class_to_idx.get(class_name)
+        if class_index is None:
+            raise ValueError(f&#34;Class {class_name} not found in the dataset.&#34;)
+        indices = [i for i, (_, label) in enumerate(dataset.samples) if label == class_index]
+        dataset = Subset(dataset, indices)
+        
+    # Creating the data loader
+    loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+
+    # Optionally, show the first batch of images
+    if debug:
+        show_first_batch(loader)
+    
+    # Defining model
+    ddpm = MyDDPM(MyUNet(channel, img_size), n_steps=n_steps, min_beta=min_beta, max_beta=max_beta, device=device)
+
+    # Optionally, show the diffusion (forward) process
+    if debug:
+        show_forward(ddpm, loader, device)
+    
+    # Création de l&#39;optimiseur
+    optim = Adam(ddpm.parameters(), lr=lr)
+
+    # Training
+    training_loop(ddpm, loader, n_epochs, optim)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="train.generate_new_images"><code class="name flex">
+<span>def <span class="ident">generate_new_images</span></span>(<span>ddpm, n_samples=16, device=None, frames_per_gif=100, gif_name='sampling.gif', c=1, h=256, w=256, gif=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generates new images using the given DDPM model.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>ddpm</code></strong> :&ensp;<code><a title="train.MyDDPM" href="#train.MyDDPM">MyDDPM</a></code></dt>
+<dd>The DDPM model.</dd>
+<dt><strong><code>n_samples</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The number of samples to generate. Defaults to 16.</dd>
+<dt><strong><code>device</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The device for computation. Defaults to None.</dd>
+<dt><strong><code>frames_per_gif</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The number of frames per GIF. Defaults to 100.</dd>
+<dt><strong><code>gif_name</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The name of the GIF file. Defaults to "sampling.gif".</dd>
+<dt><strong><code>c</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The number of channels in the images. Defaults to channel.</dd>
+<dt><strong><code>h</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The height of the images. Defaults to img_size.</dd>
+<dt><strong><code>w</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The width of the images. Defaults to img_size.</dd>
+<dt><strong><code>gif</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Whether to generate a GIF. Defaults to True.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>torch.Tensor</code></dt>
+<dd>The generated images.</dd>
+</dl>
+<h2 id="description">Description</h2>
+<p>This function generates new images using the given DDPM model. It starts by initializing the images with random noise.
+Then, it iterates over the time steps in reverse order. For each time step, it estimates the noise to be removed and performs
+partial denoising of the images. If the time step is greater than 0, it adds some more noise to the images.
+After denoising, it adds frames to the GIF if the gif flag is set to True and the current index is in the frame indices or
+the time step is 0. The frames are stored in a list. Finally, if the gif flag is set to True, the GIF is stored as a file.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_new_images(ddpm, n_samples=16, device=None, frames_per_gif=100, gif_name=&#34;sampling.gif&#34;, c=channel, h=img_size, w=img_size, gif=True):
+    &#34;&#34;&#34;
+    Generates new images using the given DDPM model.
+
+    Args:
+        ddpm (MyDDPM): The DDPM model.
+        n_samples (int, optional): The number of samples to generate. Defaults to 16.
+        device (str, optional): The device for computation. Defaults to None.
+        frames_per_gif (int, optional): The number of frames per GIF. Defaults to 100.
+        gif_name (str, optional): The name of the GIF file. Defaults to &#34;sampling.gif&#34;.
+        c (int, optional): The number of channels in the images. Defaults to channel.
+        h (int, optional): The height of the images. Defaults to img_size.
+        w (int, optional): The width of the images. Defaults to img_size.
+        gif (bool, optional): Whether to generate a GIF. Defaults to True.
+
+    Returns:
+        torch.Tensor: The generated images.
+
+    Description:
+        This function generates new images using the given DDPM model. It starts by initializing the images with random noise.
+        Then, it iterates over the time steps in reverse order. For each time step, it estimates the noise to be removed and performs
+        partial denoising of the images. If the time step is greater than 0, it adds some more noise to the images.
+        After denoising, it adds frames to the GIF if the gif flag is set to True and the current index is in the frame indices or
+        the time step is 0. The frames are stored in a list. Finally, if the gif flag is set to True, the GIF is stored as a file.&#34;&#34;&#34;
+     
+    # Defining frame indices   
+    frame_idxs = np.linspace(0, ddpm.n_steps, frames_per_gif).astype(np.uint)
+    frames = []
+    
+    with torch.no_grad():
+        # Defining device
+        if device is None:
+            device = ddpm.device
+
+        # Starting from random noise
+        x = torch.randn(n_samples, c, h, w).to(device)
+
+        for idx, t in enumerate(list(range(ddpm.n_steps))[::-1]):
+            # Estimating noise to be removed
+            time_tensor = (torch.ones(n_samples, 1) * t).to(device).long()
+            eta_theta = ddpm.backward(x, time_tensor)
+            
+            # Estimating alpha_t and alpha_t_bar
+            alpha_t = ddpm.alphas[t]
+            alpha_t_bar = ddpm.alpha_bars[t]
+
+            # Partially denoising the image
+            x = (1 / alpha_t.sqrt()) * (x - (1 - alpha_t) / (1 - alpha_t_bar).sqrt() * eta_theta)
+
+            # Adding some noise like in Langevin Dynamics fashion
+            if t &gt; 0:
+                z = torch.randn(n_samples, c, h, w).to(device)
+                beta_t = ddpm.betas[t]
+                sigma_t = beta_t.sqrt()
+                x = x + sigma_t * z
+
+            # Adding frames to the GIF
+            if gif and idx in frame_idxs or t == 0:
+                
+                # Putting digits in range [0, 255]
+                normalized = x.clone()
+                for i in range(len(normalized)):
+                    normalized[i] -= torch.min(normalized[i])
+                    normalized[i] *= 255 / torch.max(normalized[i])
+                normalized = normalized.cpu().numpy().astype(np.uint8)
+
+                # Convert single channel to RGB by stacking
+                if c == 1:
+                    normalized = np.concatenate((normalized,)*3, axis=1)  # Concatenate along the channel axis
+
+                sqrt_n = int(np.sqrt(n_samples))
+                if sqrt_n ** 2 == n_samples:  # Vérifier si n_samples est un carré parfait
+                    frame = einops.rearrange(normalized, &#34;(b1 b2) c h w -&gt; (b1 h) (b2 w) c&#34;, b1=sqrt_n)
+                else:
+                    frame = einops.rearrange(normalized, &#34;b c h w -&gt; (b h) w c&#34;)
+
+                # Rendering frame
+                frames.append(frame)
+
+    # Storing the gif
+    if gif:
+        with imageio.get_writer(gif_name, mode=&#34;I&#34;) as writer:
+            for idx, frame in enumerate(frames):
+                writer.append_data(frame)
+                if idx == len(frames) - 1:
+                    for _ in range(frames_per_gif // 3):
+                        writer.append_data(frames[-1])
+
+    return x</code></pre>
+</details>
+</dd>
+<dt id="train.get_config"><code class="name flex">
+<span>def <span class="ident">get_config</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reads the configuration from 'config.ini' and returns it as a dictionary.</p>
+<p>:return: A dictionary containing the configurations.
+:rtype: dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_config():
+    &#34;&#34;&#34;
+    Reads the configuration from &#39;config.ini&#39; and returns it as a dictionary.
+    
+    :return: A dictionary containing the configurations.
+    :rtype: dict
+    &#34;&#34;&#34;
+    # Create a ConfigParser object
+    config = configparser.ConfigParser()
+
+    # Read the config.ini file
+    config.read(&#39;config.ini&#39;)
+
+    # Access the DEFAULT section and return it as a dictionary
+    config_dict = {key: eval(value) if value in [&#39;True&#39;, &#39;False&#39;, &#39;None&#39;] else value for key, value in config[&#39;DEFAULT&#39;].items()}
+    
+    # Convert numeric values from strings to appropriate types
+    config_dict[&#39;img_size&#39;] = int(config_dict[&#39;img_size&#39;])
+    config_dict[&#39;channel&#39;] = int(config_dict[&#39;channel&#39;])
+    config_dict[&#39;batch_size&#39;] = int(config_dict[&#39;batch_size&#39;])
+    config_dict[&#39;n_epochs&#39;] = int(config_dict[&#39;n_epochs&#39;])
+    config_dict[&#39;n_steps&#39;] = int(config_dict[&#39;n_steps&#39;])
+    config_dict[&#39;lr&#39;] = float(config_dict[&#39;lr&#39;])
+    config_dict[&#39;min_beta&#39;] = float(config_dict[&#39;min_beta&#39;])
+    config_dict[&#39;max_beta&#39;] = float(config_dict[&#39;max_beta&#39;])
+    config_dict[&#39;debug&#39;] = bool(config_dict[&#39;debug&#39;])
+    config_dict[&#39;n_images&#39;] = int(config_dict[&#39;n_images&#39;])
+    
+
+    return config_dict</code></pre>
+</details>
+</dd>
+<dt id="train.make_path"><code class="name flex">
+<span>def <span class="ident">make_path</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A function that creates a directory at the specified path if it does not already exist.</p>
+<p>Args:
+- path (str): The path where the directory will be created.</p>
+<p>Returns:
+- None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_path(path):
+    &#34;&#34;&#34;
+    A function that creates a directory at the specified path if it does not already exist.
+    
+    Args:
+    - path (str): The path where the directory will be created.
+    
+    Returns:
+    - None
+    &#34;&#34;&#34;
+    if not os.path.exists(path):
+        os.makedirs(path)</code></pre>
+</details>
+</dd>
+<dt id="train.save_images"><code class="name flex">
+<span>def <span class="ident">save_images</span></span>(<span>images, path='output', prefix='output', n_images=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Saves a specified number of images to a given path with a specified prefix.</p>
+<h2 id="parameters">Parameters</h2>
+<p>images (torch.Tensor): The tensor containing the images to be saved.
+path (str, optional): The path to save the images. Defaults to "output".
+prefix (str, optional): The prefix to be added to the saved image filenames. Defaults to "output".
+n_images (int, optional): The number of images to be saved. Defaults to 1.</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_images(images, path=&#34;output&#34;, prefix=&#34;output&#34;, n_images=1):
+    &#34;&#34;&#34;
+    Saves a specified number of images to a given path with a specified prefix.
+
+    Parameters:
+        images (torch.Tensor): The tensor containing the images to be saved.
+        path (str, optional): The path to save the images. Defaults to &#34;output&#34;.
+        prefix (str, optional): The prefix to be added to the saved image filenames. Defaults to &#34;output&#34;.
+        n_images (int, optional): The number of images to be saved. Defaults to 1.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    # Create path if it does not exist
+    make_path(path)
+    
+    # Get the number of images to save
+    n_images = n_images if n_images is not None else images.size(0)
+    
+    # Save the images
+    for i in range(min(n_images, images.size(0))):
+        img = images[i].cpu().squeeze()  # De-tensorize
+        img = (img - img.min()) / (img.max() - img.min()) * 255  # Normalization
+        img = img.byte()  # Convert to uint8
+        img_pil = Image.fromarray(img.numpy(), mode=&#34;L&#34;)  # Convert to image PIL
+        img_pil.save(os.path.join(path, f&#34;{prefix}_{i+1}.jpg&#34;))
+        print(f&#34;Image {i+1} saved at {path}&#34;)</code></pre>
+</details>
+</dd>
+<dt id="train.show_first_batch"><code class="name flex">
+<span>def <span class="ident">show_first_batch</span></span>(<span>loader)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the first batch of images.</p>
+<p>Parameters:
+- loader: The data loader containing the batches of images.</p>
+<p>Returns:
+None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_first_batch(loader):
+    &#34;&#34;&#34;
+    Shows the first batch of images.
+
+    Parameters:
+    - loader: The data loader containing the batches of images.
+
+    Returns:
+    None
+    &#34;&#34;&#34;
+    make_path(f&#34;{img_path}/original&#34;)
+    for batch in loader:
+        show_images(batch[0], &#34;original/img_first_batch&#34;)
+        break</code></pre>
+</details>
+</dd>
+<dt id="train.show_forward"><code class="name flex">
+<span>def <span class="ident">show_forward</span></span>(<span>ddpm, loader, device)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Shows the forward process.</p>
+<h2 id="parameters">Parameters</h2>
+<p>ddpm: The ddpm model.
+loader: The data loader.
+device: The device for computation.</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_forward(ddpm, loader, device):
+    &#34;&#34;&#34;
+    Shows the forward process.
+
+    Parameters:
+        ddpm: The ddpm model.
+        loader: The data loader.
+        device: The device for computation.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    make_path(f&#34;{img_path}/original&#34;)
+    make_path(f&#34;{img_path}/noisy&#34;)
+    for batch in loader:
+        imgs = batch[0]
+        show_images(imgs, &#34;original/Original_images&#34;)
+        for percent in [0, 0.25, 0.5, 0.75, 1]:
+            t_index = int(percent * (ddpm.n_steps - 1))
+            t_values = [t_index for _ in range(imgs.shape[0])]
+            noisy_imgs = ddpm(imgs.to(device), t_values)
+            show_images(noisy_imgs, f&#34;noisy/DDPM_Noisy_images_{int(percent * 100)}%&#34;)
+        break</code></pre>
+</details>
+</dd>
+<dt id="train.show_images"><code class="name flex">
+<span>def <span class="ident">show_images</span></span>(<span>images, title, path='debug_img')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Show images in a grid layout with a given title and save the resulting figure as a PNG file.</p>
+<p>Parameters:
+- images (torch.Tensor or numpy.ndarray): The images to be displayed. If a torch.Tensor is provided, it will be converted to a numpy array.
+- title (str): The title of the figure.
+- path (str, optional): The path to save the figure. Defaults to img_path.</p>
+<p>Returns:
+None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_images(images, title, path=img_path):
+    &#34;&#34;&#34;
+    Show images in a grid layout with a given title and save the resulting figure as a PNG file.
+
+    Parameters:
+    - images (torch.Tensor or numpy.ndarray): The images to be displayed. If a torch.Tensor is provided, it will be converted to a numpy array.
+    - title (str): The title of the figure.
+    - path (str, optional): The path to save the figure. Defaults to img_path.
+
+    Returns:
+    None
+    &#34;&#34;&#34;
+    # Create path if it does not exist
+    make_path(path)
+
+    # Converting images to CPU numpy arrays
+    if type(images) is torch.Tensor:
+        images = images.detach().cpu().numpy()
+
+    # Defining number of rows and columns
+    fig = plt.figure(figsize=(8, 8))
+    rows = int(len(images) ** (1 / 2))
+    cols = round(len(images) / rows)
+
+    # Populating figure with sub-plots
+    idx = 0
+    for r in range(rows):
+        for c in range(cols):
+            fig.add_subplot(rows, cols, idx + 1)
+
+            if idx &lt; len(images):
+                plt.imshow(images[idx][0], cmap=&#34;gray&#34;)
+                idx += 1
+    fig.suptitle(title, fontsize=30)
+    
+    # Save the figure
+    plt.savefig(f&#39;{path}/{title}.png&#39;)
+    print(f&#34;Saved at {path}/{title}.png&#34;)
+    plt.close()</code></pre>
+</details>
+</dd>
+<dt id="train.training_loop"><code class="name flex">
+<span>def <span class="ident">training_loop</span></span>(<span>ddpm, loader, n_epochs, optim, device=device(type='cpu'), debug=False, store_path='model.pt')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Trains a DDPM model on a given dataset using the specified optimizer and number of epochs.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>ddpm</code></strong> :&ensp;<code>DDPM</code></dt>
+<dd>The DDPM model to be trained.</dd>
+<dt><strong><code>loader</code></strong> :&ensp;<code>DataLoader</code></dt>
+<dd>The data loader containing the training dataset.</dd>
+<dt><strong><code>n_epochs</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of epochs to train the model.</dd>
+<dt><strong><code>optim</code></strong> :&ensp;<code>Optimizer</code></dt>
+<dd>The optimizer to use for training.</dd>
+<dt><strong><code>device</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The device to use for training. Defaults to the global device variable.</dd>
+<dt><strong><code>debug</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Whether to enable debug mode. Defaults to the global debug variable.</dd>
+<dt><strong><code>store_path</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The path to store the trained model. Defaults to the global model_path variable.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p>
+<h2 id="raises">Raises</h2>
+<p>None
+Side Effects:
+- Trains the DDPM model on the specified dataset.
+- Stores the trained model at the specified store_path if it is the best model encountered so far.
+- Saves the training loss plot at img_path/plot/plot_loss.png if debug mode is enabled.
+- Saves the generated images at img_path/gif/sampling.gif and img_path/epoch/{epoch + 1} if debug mode is enabled.
+- Prints the loss at each epoch and whether the model is the best encountered so far.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def training_loop(ddpm, loader, n_epochs, optim, device=device, debug=debug, store_path=model_path):
+    &#34;&#34;&#34;
+    Trains a DDPM model on a given dataset using the specified optimizer and number of epochs.
+    
+    Args:
+        ddpm (DDPM): The DDPM model to be trained.
+        loader (DataLoader): The data loader containing the training dataset.
+        n_epochs (int): The number of epochs to train the model.
+        optim (Optimizer): The optimizer to use for training.
+        device (str, optional): The device to use for training. Defaults to the global device variable.
+        debug (bool, optional): Whether to enable debug mode. Defaults to the global debug variable.
+        store_path (str, optional): The path to store the trained model. Defaults to the global model_path variable.
+        
+    Returns:
+        None
+        
+    Raises:
+        None
+        
+    Side Effects:
+        - Trains the DDPM model on the specified dataset.
+        - Stores the trained model at the specified store_path if it is the best model encountered so far.
+        - Saves the training loss plot at img_path/plot/plot_loss.png if debug mode is enabled.
+        - Saves the generated images at img_path/gif/sampling.gif and img_path/epoch/{epoch + 1} if debug mode is enabled.
+        - Prints the loss at each epoch and whether the model is the best encountered so far.
+    &#34;&#34;&#34;
+    # Defining loss
+    mse = nn.MSELoss()
+    best_loss = float(&#34;inf&#34;)
+    
+    # Defining steps
+    n_steps = ddpm.n_steps
+
+    # Create debug path if needed
+    if debug:
+        losses = []
+        make_path(f&#34;{img_path}/gif&#34;)
+        make_path(f&#34;{img_path}/epoch&#34;)
+        make_path(f&#34;{img_path}/plot&#34;)
+    
+    # Training
+    for epoch in tqdm(range(n_epochs), desc=f&#34;Training progress&#34;, colour=&#34;#00ff00&#34;):
+        epoch_loss = 0.0
+        for step, batch in enumerate(tqdm(loader, leave=False, desc=f&#34;Epoch {epoch + 1}/{n_epochs}&#34;, colour=&#34;#005500&#34;)):
+            # Loading data
+            x0 = batch[0].to(device)
+            n = len(x0)
+
+            # Picking some noise for each of the images in the batch, a timestep and the respective alpha_bars
+            eta = torch.randn_like(x0).to(device)
+            t = torch.randint(0, n_steps, (n,)).to(device)
+
+            # Computing the noisy image based on x0 and the time-step (forward process)
+            noisy_imgs = ddpm(x0, t, eta)
+
+            # Getting model estimation of noise based on the images and the time-step
+            eta_theta = ddpm.backward(noisy_imgs, t.reshape(n, -1))
+
+            # Optimizing the MSE between the noise plugged and the predicted noise
+            loss = mse(eta_theta, eta)
+            optim.zero_grad()
+            loss.backward()
+            optim.step()
+
+            # Storing loss
+            epoch_loss += loss.item() * len(x0) / len(loader.dataset)
+            
+        # Plot the loss at each epoch
+        if debug:
+            losses.append(epoch_loss)
+            plt.figure(figsize=(10, 5))
+            plt.plot(range(1, epoch + 2), losses, &#39;o-&#39;, label=&#39;Loss per Epoch&#39;)
+            plt.xlabel(&#39;Epoch&#39;)
+            plt.ylabel(&#39;Loss&#39;)
+            plt.title(&#39;Training Loss over Epochs&#39;)
+            plt.legend()
+            plt.grid(True)
+            plt.savefig(f&#34;{img_path}/plot/plot_loss.png&#34;)
+            plt.close()  
+
+            # Save images generated at this epoch
+            show_images(generate_new_images(ddpm, device=device, gif_name=f&#34;{img_path}/gif/sampling.gif&#34;), f&#34;epoch/{epoch + 1}&#34;)
+
+        # Print losss
+        log_string = f&#34;Loss at epoch {epoch + 1}: {epoch_loss:.3f}&#34;
+
+        # Storing the model
+        if best_loss &gt; epoch_loss:
+            best_loss = epoch_loss
+            torch.save(ddpm.state_dict(), store_path)
+            log_string += &#34; --&gt; Best model ever (stored)&#34;
+
+        print(log_string)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="train.MyDDPM"><code class="flex name class">
+<span>class <span class="ident">MyDDPM</span></span>
+<span>(</span><span>network, n_steps=500, min_beta=0.0001, max_beta=0.02, device=None, image_chw=(1, 256, 256))</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As per the example above, an <code>__init__()</code> call to the parent class
+must be made before assignment on the child.</p>
+</div>
+<p>:ivar training: Boolean represents whether this module is in training or
+evaluation mode.
+:vartype training: bool</p>
+<p>Initializes a new instance of the MyDDPM class.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>network</code></strong> :&ensp;<code>torch.nn.Module</code></dt>
+<dd>The neural network model used for denoising.</dd>
+<dt><strong><code>n_steps</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The number of steps in the beta schedule. Defaults to n_steps.</dd>
+<dt><strong><code>min_beta</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The minimum value of the beta schedule. Defaults to min_beta.</dd>
+<dt><strong><code>max_beta</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The maximum value of the beta schedule. Defaults to max_beta.</dd>
+<dt><strong><code>device</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The device to run the computations on. Defaults to None.</dd>
+<dt><strong><code>image_chw</code></strong> :&ensp;<code>tuple</code>, optional</dt>
+<dd>The shape of the input images. Defaults to (channel, img_size, img_size).</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MyDDPM(nn.Module):
+    def __init__(self, network, n_steps=n_steps, min_beta=min_beta, max_beta=max_beta, device=None, image_chw=(channel, img_size, img_size)):
+        &#34;&#34;&#34;
+        Initializes a new instance of the MyDDPM class.
+
+        Args:
+            network (torch.nn.Module): The neural network model used for denoising.
+            n_steps (int, optional): The number of steps in the beta schedule. Defaults to n_steps.
+            min_beta (float, optional): The minimum value of the beta schedule. Defaults to min_beta.
+            max_beta (float, optional): The maximum value of the beta schedule. Defaults to max_beta.
+            device (str, optional): The device to run the computations on. Defaults to None.
+            image_chw (tuple, optional): The shape of the input images. Defaults to (channel, img_size, img_size).
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        super(MyDDPM, self).__init__()
+        self.n_steps = n_steps
+        self.device = device
+        self.image_chw = image_chw
+        self.network = network.to(device)
+        self.betas = torch.linspace(min_beta, max_beta, n_steps).to(device)
+        self.alphas = 1 - self.betas
+        self.alpha_bars = torch.tensor([torch.prod(self.alphas[:i + 1]) for i in range(len(self.alphas))]).to(device)
+
+    def forward(self, x0, t, eta=None):
+        &#34;&#34;&#34;
+        Applies the forward pass of the DDPM model to generate noisy images.
+
+        Args:
+            x0 (torch.Tensor): The input image tensor of shape (n, c, h, w).
+            t (int): The time step of the DDPM model.
+            eta (torch.Tensor, optional): The noise tensor of shape (n, c, h, w). If not provided, a random noise tensor is generated.
+
+        Returns:
+            torch.Tensor: The noisy image tensor of shape (n, c, h, w).
+        &#34;&#34;&#34;
+        n, c, h, w = x0.shape
+        a_bar = self.alpha_bars[t]
+
+        if eta is None:
+            eta = torch.randn(n, c, h, w).to(self.device)
+
+        noisy = a_bar.sqrt().reshape(n, 1, 1, 1) * x0 + (1 - a_bar).sqrt().reshape(n, 1, 1, 1) * eta
+        return noisy
+
+    def backward(self, x, t):
+        &#34;&#34;&#34;
+        Run each image through the network for each timestep t in the vector t.
+        The network returns its estimation of the noise that was added.
+
+        Parameters:
+            x (torch.Tensor): The input image tensor of shape (n, c, h, w).
+            t (torch.Tensor): The time step tensor of shape (n,).
+
+        Returns:
+            torch.Tensor: The output tensor of shape (n, c, h, w).
+        &#34;&#34;&#34;
+        return self.network(x, t)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>torch.nn.modules.module.Module</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="train.MyDDPM.backward"><code class="name flex">
+<span>def <span class="ident">backward</span></span>(<span>self, x, t)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Run each image through the network for each timestep t in the vector t.
+The network returns its estimation of the noise that was added.</p>
+<h2 id="parameters">Parameters</h2>
+<p>x (torch.Tensor): The input image tensor of shape (n, c, h, w).
+t (torch.Tensor): The time step tensor of shape (n,).</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>torch.Tensor</code></dt>
+<dd>The output tensor of shape (n, c, h, w).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def backward(self, x, t):
+    &#34;&#34;&#34;
+    Run each image through the network for each timestep t in the vector t.
+    The network returns its estimation of the noise that was added.
+
+    Parameters:
+        x (torch.Tensor): The input image tensor of shape (n, c, h, w).
+        t (torch.Tensor): The time step tensor of shape (n,).
+
+    Returns:
+        torch.Tensor: The output tensor of shape (n, c, h, w).
+    &#34;&#34;&#34;
+    return self.network(x, t)</code></pre>
+</details>
+</dd>
+<dt id="train.MyDDPM.forward"><code class="name flex">
+<span>def <span class="ident">forward</span></span>(<span>self, x0, t, eta=None) ‑> Callable[..., Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Applies the forward pass of the DDPM model to generate noisy images.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x0</code></strong> :&ensp;<code>torch.Tensor</code></dt>
+<dd>The input image tensor of shape (n, c, h, w).</dd>
+<dt><strong><code>t</code></strong> :&ensp;<code>int</code></dt>
+<dd>The time step of the DDPM model.</dd>
+<dt><strong><code>eta</code></strong> :&ensp;<code>torch.Tensor</code>, optional</dt>
+<dd>The noise tensor of shape (n, c, h, w). If not provided, a random noise tensor is generated.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>torch.Tensor</code></dt>
+<dd>The noisy image tensor of shape (n, c, h, w).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def forward(self, x0, t, eta=None):
+    &#34;&#34;&#34;
+    Applies the forward pass of the DDPM model to generate noisy images.
+
+    Args:
+        x0 (torch.Tensor): The input image tensor of shape (n, c, h, w).
+        t (int): The time step of the DDPM model.
+        eta (torch.Tensor, optional): The noise tensor of shape (n, c, h, w). If not provided, a random noise tensor is generated.
+
+    Returns:
+        torch.Tensor: The noisy image tensor of shape (n, c, h, w).
+    &#34;&#34;&#34;
+    n, c, h, w = x0.shape
+    a_bar = self.alpha_bars[t]
+
+    if eta is None:
+        eta = torch.randn(n, c, h, w).to(self.device)
+
+    noisy = a_bar.sqrt().reshape(n, 1, 1, 1) * x0 + (1 - a_bar).sqrt().reshape(n, 1, 1, 1) * eta
+    return noisy</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="train.SquarePad"><code class="flex name class">
+<span>class <span class="ident">SquarePad</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SquarePad:
+    def __call__(self, image):
+        &#34;&#34;&#34;
+        A function that pads the input image to make it square by adding padding to the left, right, top, and bottom.
+        
+        Args:
+        - image: The input image to be padded.
+        
+        Returns:
+        - Tensor: The padded image.
+        &#34;&#34;&#34;
+        max_wh = max(image.size)
+        p_left, p_top = [(max_wh - s) // 2 for s in image.size]
+        p_right, p_bottom = [max_wh - (s+pad) for s, pad in zip(image.size, [p_left, p_top])]
+        padding = (p_left, p_top, p_right, p_bottom)
+        return F.pad(image, padding, 0, &#39;constant&#39;)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="train.generate_new_images" href="#train.generate_new_images">generate_new_images</a></code></li>
+<li><code><a title="train.get_config" href="#train.get_config">get_config</a></code></li>
+<li><code><a title="train.make_path" href="#train.make_path">make_path</a></code></li>
+<li><code><a title="train.save_images" href="#train.save_images">save_images</a></code></li>
+<li><code><a title="train.show_first_batch" href="#train.show_first_batch">show_first_batch</a></code></li>
+<li><code><a title="train.show_forward" href="#train.show_forward">show_forward</a></code></li>
+<li><code><a title="train.show_images" href="#train.show_images">show_images</a></code></li>
+<li><code><a title="train.training_loop" href="#train.training_loop">training_loop</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="train.MyDDPM" href="#train.MyDDPM">MyDDPM</a></code></h4>
+<ul class="">
+<li><code><a title="train.MyDDPM.backward" href="#train.MyDDPM.backward">backward</a></code></li>
+<li><code><a title="train.MyDDPM.forward" href="#train.MyDDPM.forward">forward</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="train.SquarePad" href="#train.SquarePad">SquarePad</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
